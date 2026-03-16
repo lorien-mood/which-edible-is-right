@@ -1,0 +1,377 @@
+<!-- ============================================================
+  MOOD.COM — INTERACTIVE WIDGET
+  Article: 5 Best THC Edibles of 2026
+  Element: "Which Edible Is Right For You?" Product Picker
+  Placement: After the 5-product list section, before
+             "Understanding Cannabis Edibles"
+  Instructions: Copy everything between the WIDGET START and
+                WIDGET END comments and paste into Contentful
+                as an HTML block.
+  ============================================================ -->
+
+<!-- ═══════════ WIDGET START — PASTE INTO CONTENTFUL ═══════════ -->
+<div id="mood-edible-picker" style="
+  background: #FAF6ED;
+  border: 2px solid #C8BEA8;
+  border-radius: 16px;
+  padding: 36px 40px 32px;
+  margin: 48px 0;
+  font-family: Georgia, 'Times New Roman', serif;
+  max-width: 680px;
+">
+
+  <!-- Header -->
+  <p style="
+    margin: 0 0 4px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #1E462D;
+  ">Find Your Match</p>
+
+  <h3 style="
+    margin: 0 0 8px;
+    font-size: 26px;
+    font-style: italic;
+    font-weight: 700;
+    color: #1E1A14;
+    line-height: 1.2;
+  ">Which Edible Is Right For You?</h3>
+
+  <p style="
+    margin: 0 0 28px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 14px;
+    color: #5A5040;
+    line-height: 1.5;
+  ">Answer two quick questions and we'll point you to the best pick from our 2026 list.</p>
+
+  <!-- ── Step 1 ── -->
+  <div id="ep-step-1">
+    <p style="
+      margin: 0 0 14px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #1E462D;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    ">Step 1 of 2 &nbsp;·&nbsp; What are you in the mood for?</p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+      <button onclick="epAnswer(1,'euphoria')" style="
+        background: #fff;
+        border: 2px solid #C8BEA8;
+        border-radius: 50px;
+        padding: 10px 22px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-size: 14px;
+        color: #1E1A14;
+        cursor: pointer;
+        transition: all 0.18s ease;
+      " onmouseover="this.style.borderColor='#1E462D';this.style.background='#EEF5F0'"
+         onmouseout="this.style.borderColor='#C8BEA8';this.style.background='#fff'">
+        ✨ Euphoria &amp; good vibes
+      </button>
+      <button onclick="epAnswer(1,'romance')" style="
+        background: #fff;
+        border: 2px solid #C8BEA8;
+        border-radius: 50px;
+        padding: 10px 22px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-size: 14px;
+        color: #1E1A14;
+        cursor: pointer;
+        transition: all 0.18s ease;
+      " onmouseover="this.style.borderColor='#1E462D';this.style.background='#EEF5F0'"
+         onmouseout="this.style.borderColor='#C8BEA8';this.style.background='#fff'">
+        🌹 Romance &amp; intimacy
+      </button>
+      <button onclick="epAnswer(1,'focus')" style="
+        background: #fff;
+        border: 2px solid #C8BEA8;
+        border-radius: 50px;
+        padding: 10px 22px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-size: 14px;
+        color: #1E1A14;
+        cursor: pointer;
+        transition: all 0.18s ease;
+      " onmouseover="this.style.borderColor='#1E462D';this.style.background='#EEF5F0'"
+         onmouseout="this.style.borderColor='#C8BEA8';this.style.background='#fff'">
+        🧠 Focus &amp; creativity
+      </button>
+      <button onclick="epAnswer(1,'chill')" style="
+        background: #fff;
+        border: 2px solid #C8BEA8;
+        border-radius: 50px;
+        padding: 10px 22px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-size: 14px;
+        color: #1E1A14;
+        cursor: pointer;
+        transition: all 0.18s ease;
+      " onmouseover="this.style.borderColor='#1E462D';this.style.background='#EEF5F0'"
+         onmouseout="this.style.borderColor='#C8BEA8';this.style.background='#fff'">
+        😌 Chill &amp; unwind
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Step 2 ── -->
+  <div id="ep-step-2" style="display:none; opacity:0; transition: opacity 0.3s ease;">
+    <p style="
+      margin: 0 0 14px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      color: #1E462D;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    ">Step 2 of 2 &nbsp;·&nbsp; What format do you prefer?</p>
+
+    <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+      <button onclick="epAnswer(2,'gummy')" style="
+        background: #fff;
+        border: 2px solid #C8BEA8;
+        border-radius: 50px;
+        padding: 10px 22px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-size: 14px;
+        color: #1E1A14;
+        cursor: pointer;
+        transition: all 0.18s ease;
+      " onmouseover="this.style.borderColor='#1E462D';this.style.background='#EEF5F0'"
+         onmouseout="this.style.borderColor='#C8BEA8';this.style.background='#fff'">
+        🍬 Gummy
+      </button>
+      <button onclick="epAnswer(2,'baked')" style="
+        background: #fff;
+        border: 2px solid #C8BEA8;
+        border-radius: 50px;
+        padding: 10px 22px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-size: 14px;
+        color: #1E1A14;
+        cursor: pointer;
+        transition: all 0.18s ease;
+      " onmouseover="this.style.borderColor='#1E462D';this.style.background='#EEF5F0'"
+         onmouseout="this.style.borderColor='#C8BEA8';this.style.background='#fff'">
+        🍫 Baked good
+      </button>
+      <button onclick="epAnswer(2,'either')" style="
+        background: #fff;
+        border: 2px solid #C8BEA8;
+        border-radius: 50px;
+        padding: 10px 22px;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+        font-size: 14px;
+        color: #1E1A14;
+        cursor: pointer;
+        transition: all 0.18s ease;
+      " onmouseover="this.style.borderColor='#1E462D';this.style.background='#EEF5F0'"
+         onmouseout="this.style.borderColor='#C8BEA8';this.style.background='#fff'">
+        🤷 No preference
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Result ── -->
+  <div id="ep-result" style="display:none; opacity:0; transition: opacity 0.35s ease;"></div>
+
+  <!-- ── Reset ── -->
+  <div id="ep-reset" style="display:none; margin-top: 20px;">
+    <button onclick="epReset()" style="
+      background: none;
+      border: none;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      font-size: 13px;
+      color: #1E462D;
+      cursor: pointer;
+      text-decoration: underline;
+      padding: 0;
+    ">← Start over</button>
+  </div>
+
+</div><!-- /mood-edible-picker -->
+
+<script>
+(function () {
+
+  var _mood = '';
+
+  /* ── Product data ──────────────────────────────────────────────────── */
+  var results = {
+    /* mood → format → result */
+    euphoria: {
+      gummy:  { name: 'Epic Euphoria THC Gummies',
+                desc: 'Five functional mushrooms and three distinct botanicals deliver a uniquely euphoric experience that lives up to the name. Rated 4.7/5 by our community.',
+                url:  'https://mood.com/product/epic-euphoria-thc-gummies/dose-standard',
+                cta:  'Shop Epic Euphoria',
+                tag:  'Best for euphoric vibes' },
+      baked:  { name: "Andy's THC Brownie Bites",
+                desc: "Rich chocolate flavor with varying THC and CBD options. A classic baked good that delivers a warm, feel-good experience without the bells and whistles.",
+                url:  'https://mood.com/product/andys-thc-brownie-bites/dose-20mg-thc-cbd',
+                cta:  "Shop Andy's Brownie Bites",
+                tag:  'Best baked euphoria pick' },
+      either: { name: 'Epic Euphoria THC Gummies',
+                desc: 'Five functional mushrooms and three distinct botanicals deliver a uniquely euphoric experience that lives up to the name. Rated 4.7/5 by our community.',
+                url:  'https://mood.com/product/epic-euphoria-thc-gummies/dose-standard',
+                cta:  'Shop Epic Euphoria',
+                tag:  'Best for euphoric vibes' }
+    },
+    romance: {
+      gummy:  { name: 'Sexual Euphoria THC Gummies',
+                desc: 'A blend of Delta-9 THC, THCp, horny goat weed, and maca root makes these the go-to pick for date night. A fan favorite from our Aroused collection.',
+                url:  'https://mood.com/product/sexual-euphoria-thcpfree-thc-gummies/dose-advanced',
+                cta:  'Shop Sexual Euphoria',
+                tag:  'Best for romance' },
+      baked:  { name: 'Sexual Euphoria THC Gummies',
+                desc: 'A blend of Delta-9 THC, THCp, horny goat weed, and maca root makes these the go-to pick for date night — even if baked goods are your usual jam.',
+                url:  'https://mood.com/product/sexual-euphoria-thcpfree-thc-gummies/dose-advanced',
+                cta:  'Shop Sexual Euphoria',
+                tag:  'Best for romance' },
+      either: { name: 'Sexual Euphoria THC Gummies',
+                desc: 'A blend of Delta-9 THC, THCp, horny goat weed, and maca root makes these the go-to pick for date night. A fan favorite from our Aroused collection.',
+                url:  'https://mood.com/product/sexual-euphoria-thcpfree-thc-gummies/dose-advanced',
+                cta:  'Shop Sexual Euphoria',
+                tag:  'Best for romance' }
+    },
+    focus: {
+      gummy:  { name: 'Mind Magic THC Gummies',
+                desc: 'Green tea extract, GABA, and choline alongside 15mg Delta-9 and 5mg THCv in a huckleberry lemonade gummy. Built for the curious and the creative.',
+                url:  'https://mood.com/product/mind-magic-thc-gummies/dose-advanced',
+                cta:  'Shop Mind Magic',
+                tag:  'Best for focus & creativity' },
+      baked:  { name: 'Mind Magic THC Gummies',
+                desc: 'Green tea extract, GABA, and choline alongside 15mg Delta-9 and 5mg THCv. No baked good in our lineup targets focus the way these do.',
+                url:  'https://mood.com/product/mind-magic-thc-gummies/dose-advanced',
+                cta:  'Shop Mind Magic',
+                tag:  'Best for focus & creativity' },
+      either: { name: 'Mind Magic THC Gummies',
+                desc: 'Green tea extract, GABA, and choline alongside 15mg Delta-9 and 5mg THCv in a huckleberry lemonade gummy. Built for the curious and the creative.',
+                url:  'https://mood.com/product/mind-magic-thc-gummies/dose-advanced',
+                cta:  'Shop Mind Magic',
+                tag:  'Best for focus & creativity' }
+    },
+    chill: {
+      gummy:  { name: "Andy's THC Fruity Crisp",
+                desc: "A balanced 10mg Delta-9 + 10mg CBD blend for a grounded, easygoing experience — and at just $6 a piece, it's the most accessible pick on the list.",
+                url:  'https://mood.com/product/andys-thc-fruity-crisp/dose-10-mg',
+                cta:  "Shop Andy's Fruity Crisp",
+                tag:  'Best for chilling out' },
+      baked:  { name: "Andy's THC Fruity Crisp",
+                desc: "A balanced 10mg Delta-9 + 10mg CBD blend for a grounded, easygoing experience — and at just $6 a piece, it's the most accessible pick on the list.",
+                url:  'https://mood.com/product/andys-thc-fruity-crisp/dose-10-mg',
+                cta:  "Shop Andy's Fruity Crisp",
+                tag:  'Best for chilling out' },
+      either: { name: "Andy's THC Fruity Crisp",
+                desc: "A balanced 10mg Delta-9 + 10mg CBD blend for a grounded, easygoing experience — and at just $6 a piece, it's the most accessible pick on the list.",
+                url:  'https://mood.com/product/andys-thc-fruity-crisp/dose-10-mg',
+                cta:  "Shop Andy's Fruity Crisp",
+                tag:  'Best for chilling out' }
+    }
+  };
+
+  /* ── Step logic ────────────────────────────────────────────────────── */
+  window.epAnswer = function (step, value) {
+    if (step === 1) {
+      _mood = value;
+      /* hide step 1, show step 2 */
+      var s1 = document.getElementById('ep-step-1');
+      var s2 = document.getElementById('ep-step-2');
+      s1.style.opacity = '0';
+      setTimeout(function () {
+        s1.style.display = 'none';
+        s2.style.display = 'block';
+        setTimeout(function () { s2.style.opacity = '1'; }, 20);
+      }, 250);
+    } else {
+      /* show result */
+      var r = results[_mood][value];
+      var s2 = document.getElementById('ep-step-2');
+      var rd = document.getElementById('ep-result');
+      var rs = document.getElementById('ep-reset');
+
+      s2.style.opacity = '0';
+      setTimeout(function () {
+        s2.style.display = 'none';
+
+        rd.innerHTML =
+          '<div style="' +
+            'background:#1E462D;' +
+            'border-radius:12px;' +
+            'padding:24px 28px;' +
+            'margin-top:4px;' +
+          '">' +
+            '<p style="' +
+              'margin:0 0 6px;' +
+              'font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',sans-serif;' +
+              'font-size:11px;' +
+              'font-weight:700;' +
+              'letter-spacing:0.12em;' +
+              'text-transform:uppercase;' +
+              'color:#A8C9B0;' +
+            '">' + r.tag + '</p>' +
+            '<p style="' +
+              'margin:0 0 8px;' +
+              'font-family:Georgia,serif;' +
+              'font-size:20px;' +
+              'font-style:italic;' +
+              'font-weight:700;' +
+              'color:#FFFFFF;' +
+              'line-height:1.2;' +
+            '">' + r.name + '</p>' +
+            '<p style="' +
+              'margin:0 0 20px;' +
+              'font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',sans-serif;' +
+              'font-size:14px;' +
+              'color:#D4E8DA;' +
+              'line-height:1.55;' +
+            '">' + r.desc + '</p>' +
+            '<a href="' + r.url + '" style="' +
+              'display:inline-block;' +
+              'background:#FFFFFF;' +
+              'color:#1E462D;' +
+              'font-family:-apple-system,BlinkMacSystemFont,\'Segoe UI\',sans-serif;' +
+              'font-size:13px;' +
+              'font-weight:700;' +
+              'letter-spacing:0.04em;' +
+              'text-decoration:none;' +
+              'padding:10px 24px;' +
+              'border-radius:50px;' +
+            '">' + r.cta + ' →</a>' +
+          '</div>';
+
+        rd.style.display = 'block';
+        rs.style.display = 'block';
+        setTimeout(function () { rd.style.opacity = '1'; }, 20);
+      }, 250);
+    }
+  };
+
+  /* ── Reset ─────────────────────────────────────────────────────────── */
+  window.epReset = function () {
+    _mood = '';
+    var s1 = document.getElementById('ep-step-1');
+    var s2 = document.getElementById('ep-step-2');
+    var rd = document.getElementById('ep-result');
+    var rs = document.getElementById('ep-reset');
+
+    rd.style.opacity = '0';
+    rs.style.display = 'none';
+    setTimeout(function () {
+      rd.style.display  = 'none';
+      s2.style.display  = 'none';
+      s2.style.opacity  = '0';
+      s1.style.display  = 'block';
+      s1.style.opacity  = '0';
+      setTimeout(function () { s1.style.opacity = '1'; }, 20);
+    }, 250);
+  };
+
+}());
+</script>
+<!-- ═══════════════ WIDGET END ═══════════════════════════════════ -->
